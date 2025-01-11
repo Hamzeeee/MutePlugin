@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    
+}
+
+group = 'de.hamze'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    compileOnly("com.velocitypowered:velocity-api:3.4.0-SNAPSHOT")
+    implementation("com.zaxxer:HikariCP:6.2.1")
+    implementation("mysql:mysql-connector-java:5.1.6")
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,8 @@
+{
+  "id": "muteplugin",
+  "name": "Mute Plugin",
+  "version": "1.0",
+  "authors": ["Hamze Al Maliky"],
+  "main": "de.hamze.main.MutePlugin",
+  "description": "A simple Velocity plugin"
+}
